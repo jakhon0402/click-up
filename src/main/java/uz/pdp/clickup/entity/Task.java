@@ -34,20 +34,21 @@ public class Task extends AbstractEntity{
     @Column(nullable = false)
     private Date startedDate;
 
-    
-
-    @Enumerated(value = EnumType.STRING)
-    private Colors color;
-
-    @ManyToOne
     @Column(nullable = false)
-    private Space space;
+    private boolean startTimeHas;
 
     @Column(nullable = false)
-    private boolean archived;
+    private Date dueDate;
 
     @Column(nullable = false)
-    private String accessType;
+    private boolean dueTimeHas;
+
+    @Column(nullable = false)
+    private long estimatedTime;
+
+
+    @Column(nullable = false)
+    private Date activatedDate;
 
 
 }
