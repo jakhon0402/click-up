@@ -19,7 +19,7 @@ public class TaskHistory extends AbstractEntity{
 
     @Column(nullable = false)
     private String changeFieldName;
-    
+
     @Column(nullable = false)
     private String before;
 
