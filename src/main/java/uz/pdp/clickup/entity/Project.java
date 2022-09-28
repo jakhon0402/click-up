@@ -21,7 +21,6 @@ public class Project extends AbstractEntity{
     private Colors color;
 
     @ManyToOne
-    @Column(nullable = false)
     private Space space;
 
     @Column(nullable = false)

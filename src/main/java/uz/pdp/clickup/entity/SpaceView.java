@@ -16,10 +16,8 @@ import javax.persistence.ManyToOne;
 @Entity
 public class SpaceView extends AbstractEntity{
     @ManyToOne
-    @Column(nullable = false)
     private Space space;
 
     @ManyToOne
-    @Column(nullable = false)
     private View view;
 }

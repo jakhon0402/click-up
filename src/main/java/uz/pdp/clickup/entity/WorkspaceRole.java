@@ -16,7 +16,6 @@ public class WorkspaceRole extends AbstractEntity{
     private String name;
 
     @ManyToOne
-    @Column(nullable = false)
     private Workspace workspace;
 
     @ManyToOne

@@ -22,15 +22,12 @@ public class Status extends AbstractEntity{
     private Colors color;
 
     @ManyToOne
-    @Column(nullable = false)
     private Space space;
 
     @ManyToOne
-    @Column(nullable = false)
     private Project project;
 
     @ManyToOne
-    @Column(nullable = false)
     private Category category;
 
     @Enumerated(value = EnumType.STRING)

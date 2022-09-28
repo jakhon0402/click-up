@@ -24,11 +24,9 @@ public class ProjectUser extends AbstractEntity{
     private Colors color;
 
     @ManyToOne
-    @Column(nullable = false)
     private Project project;
 
     @ManyToOne
-    @Column(nullable = false)
     private User user;
 
     @Enumerated(value = EnumType.STRING)

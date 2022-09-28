@@ -16,11 +16,9 @@ public class TaskDependency extends AbstractEntity{
     private String name;
 
     @ManyToOne
-    @Column(nullable = false)
     private Task task;
 
     @ManyToOne
-    @Column(nullable = false)
     private TaskDependency taskDependency;
 
     @Column(nullable = false)

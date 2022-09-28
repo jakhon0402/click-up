@@ -19,11 +19,9 @@ public class TaskAttachment extends AbstractEntity{
     private String name;
 
     @ManyToOne
-    @Column(nullable = false)
     private Task task;
 
     @ManyToOne
-    @Column(nullable = false)
     private Attachment attachment;
 
     @Column(nullable = false)

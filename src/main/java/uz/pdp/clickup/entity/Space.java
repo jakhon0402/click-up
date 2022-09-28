@@ -21,18 +21,15 @@ public class Space extends AbstractEntity{
     private Colors color;
 
     @ManyToOne
-    @Column(nullable = false)
     private Workspace workspace;
 
     @Column(nullable = false)
     private String initialLetter;
 
     @OneToOne
-    @Column(nullable = false)
     private Attachment avatarId;
 
     @ManyToOne
-    @Column(nullable = false)
     private Icon icon;
 
     @Column(nullable = false)

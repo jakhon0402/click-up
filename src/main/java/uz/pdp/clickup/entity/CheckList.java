@@ -19,6 +19,5 @@ public class CheckList extends AbstractEntity{
     private String name;
 
     @ManyToOne
-    @Column(nullable = false)
     private Task task;
 }

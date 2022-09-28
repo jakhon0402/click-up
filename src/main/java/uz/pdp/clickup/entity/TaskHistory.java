@@ -14,7 +14,6 @@ import javax.persistence.ManyToOne;
 @Entity
 public class TaskHistory extends AbstractEntity{
     @ManyToOne
-    @Column(nullable = false)
     private Task task;
 
     @Column(nullable = false)

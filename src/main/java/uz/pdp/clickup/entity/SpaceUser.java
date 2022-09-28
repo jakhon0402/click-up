@@ -15,11 +15,9 @@ import javax.persistence.*;
 @Entity
 public class SpaceUser extends AbstractEntity{
     @ManyToOne
-    @Column(nullable = false)
     private Space space;
 
     @ManyToOne
-    @Column(nullable = false)
     private User member;
 
 }

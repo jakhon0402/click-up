@@ -1,37 +1,29 @@
-package uz.pdp.clickup.entity;
+package uz.pdp.clickup.entity.template;
 
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Type;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.LastModifiedBy;
+import uz.pdp.clickup.entity.AbstractEntity;
+import uz.pdp.clickup.entity.User;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
-import java.util.UUID;
 
-@MappedSuperclass
 @Data
-public abstract class AbstractEntity {
-    @Id
-//    @GeneratedValue(generator = "uuid2")
-//    @Type(type = "org.hibernate.PostgresUUIDType")
-//    @GenericGenerator(name = "uuid2",strategy = "org.hibernate.id.UUIDGenerator")
-    private UUID id;
-
-    @Column(nullable = false)
+@MappedSuperclass
+public abstract class AbsMainEntity{
+    @Column(updatable = false)
     @CreationTimestamp
-    private Timestamp cratedAt;
+    private Timestamp createdAt;
 
-    @Column(nullable = false)
     @UpdateTimestamp
     private Timestamp updatedAt;
 
-    @JoinColumn(updatable = false)
     @CreatedBy
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(updatable = false)
     private User createdBy;
 
     @JoinColumn

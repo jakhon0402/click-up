@@ -15,10 +15,8 @@ import javax.persistence.*;
 @Entity
 public class SpaceClickApps extends AbstractEntity{
     @ManyToOne
-    @Column(nullable = false)
     private Space space;
 
     @ManyToOne
-    @Column(nullable = false)
     private ClickApps clickApps;
 }

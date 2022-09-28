@@ -21,6 +21,5 @@ public class Tag extends AbstractEntity{
     private Colors color;
 
     @ManyToOne
-    @Column(nullable = false)
     private Workspace workspace;
 }

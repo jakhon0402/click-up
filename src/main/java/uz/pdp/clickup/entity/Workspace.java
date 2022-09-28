@@ -19,7 +19,6 @@ public class Workspace extends AbstractEntity{
     private Colors color;
 
     @ManyToOne
-    @Column(nullable = false)
     private User owner;
 
     @Column(nullable = false)

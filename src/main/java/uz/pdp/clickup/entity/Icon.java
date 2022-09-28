@@ -18,7 +18,6 @@ public class Icon extends AbstractEntity{
     private Colors color;
 
     @ManyToOne
-    @Column(nullable = false)
     private Attachment attachment;
 
     @Column(nullable = false)

@@ -20,11 +20,9 @@ public class CategoryUser extends AbstractEntity{
     private String name;
 
     @ManyToOne
-    @Column(nullable = false)
     private Category category;
 
     @ManyToOne
-    @Column(nullable = false)
     private User user;
 
     @Enumerated(value = EnumType.STRING)

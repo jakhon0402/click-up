@@ -18,7 +18,6 @@ public class ClickApps extends AbstractEntity{
     private String name;
 
     @ManyToOne
-    @Column(nullable = false)
     private Icon icon;
 
 }

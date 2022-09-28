@@ -19,13 +19,11 @@ public class CheckListItem extends AbstractEntity{
     private String name;
 
     @ManyToOne
-    @Column(nullable = false)
     private CheckList checkList;
 
     @Column(nullable = false)
     private boolean resolved;
 
     @ManyToOne
-    @Column(nullable = false)
     private User assignedUser;
 }

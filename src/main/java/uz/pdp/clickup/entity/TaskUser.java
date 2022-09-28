@@ -14,10 +14,8 @@ import javax.persistence.ManyToOne;
 @Entity
 public class TaskUser extends AbstractEntity{
     @ManyToOne
-    @Column(nullable = false)
     private Task task;
 
     @ManyToOne
-    @Column(nullable = false)
     private User user;
 }

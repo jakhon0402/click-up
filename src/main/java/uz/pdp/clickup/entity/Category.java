@@ -21,7 +21,6 @@ public class Category extends AbstractEntity{
     private Colors color;
 
     @ManyToOne
-    @Column(nullable = false)
     private Project project;
 
     @Column(nullable = false)

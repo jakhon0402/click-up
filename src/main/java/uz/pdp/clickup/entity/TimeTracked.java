@@ -14,7 +14,6 @@ import java.sql.Date;
 @Entity
 public class TimeTracked extends AbstractEntity{
     @ManyToOne
-    @Column(nullable = false)
     private Task task;
 
     @Column(nullable = false)
