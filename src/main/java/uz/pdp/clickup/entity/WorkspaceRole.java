@@ -12,11 +12,10 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 public class WorkspaceRole extends AbstractEntity{
-    @Column(nullable = false)
-    private String name;
-
     @ManyToOne
     private Workspace workspace;
+    @Column(nullable = false)
+    private String name;
 
     @ManyToOne
     private WorkspaceRole extendsRole;

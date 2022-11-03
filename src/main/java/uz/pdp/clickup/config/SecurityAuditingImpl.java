@@ -19,7 +19,6 @@ public class SecurityAuditingImpl implements AuditorAware<UUID> {
             User employee = (User) authentication.getPrincipal();
             return Optional.of(employee.getId());
         }
-
         return Optional.empty();
 
     }

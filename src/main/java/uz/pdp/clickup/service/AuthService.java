@@ -1,4 +1,4 @@
-package uz.pdp.clickup;
+package uz.pdp.clickup.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
@@ -46,7 +46,7 @@ public class AuthService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return null;
+        return userRepo.findByEmail(username).orElseThrow(()-> new UsernameNotFoundException(username + " topilmadi"));
     }
 
     public ApiResponse register(RegisterDto registerDto) {
@@ -100,7 +100,7 @@ public class AuthService implements UserDetailsService {
                     loginDto.getEmail(),
                     loginDto.getPassword()));
             User user = (User) authentication.getPrincipal();
-            String token = jwtProvider.generateToken(loginDto.getEmail());
+            String token = jwtProvider.generateToken(user.getEmail());
             return new ApiResponse(token,true);
         }
         catch (BadCredentialsException badCredentialsException){
